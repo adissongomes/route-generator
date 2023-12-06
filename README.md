@@ -19,4 +19,31 @@ it could be used for a scenario of a idempotent consumer.
 
 ## Running
 
-[//]: # (TODO)
+Run docker compose:
+```shell
+./docker-compose up -d
+```
+
+Start the application using the IDE or the command line below:
+```
+./gradlew bootRun
+```
+
+## Challenge
+Create another Git repository with a Spring Boot project that should containing the following starters: Web, Data JPA, Spring for Kafka, Actuator, Test.
+
+__Features__
+
+_REST API_
+- Endpoint to get all completed routes
+- Endpoint to get a single route events
+- Endpoint to force pending routes conclusion
+> Add the Swagger for those endpoints. Use the [Spring Doc](https://springdoc.org/)
+
+_Kafka Consumer_
+- Consume the topic `routes` at the broker localhost:9092 using
+  - key serializer/deserializer: String
+  - value serializer/deserializer: Json (it is available in the Spring for Kafka dependency) 
+
+Create the _README.md_ file explaning how to run the project. Feel free to include any details you consider relevant.
+
